@@ -1,2 +1,5 @@
 *.ipynb
 TODO.md
+.venv/
+.vscode/
+__pycache__
