@@ -1,0 +1,2 @@
+[tool.pylint]
+    ignore-patterns =   [".*example.*"]
