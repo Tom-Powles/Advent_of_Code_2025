@@ -1,8 +1,7 @@
 """Day example solution."""
 
+import pathlib
 from typing import Literal
-
-from utils import load_puzzle_input
 
 DAY = "example"
 
@@ -12,16 +11,25 @@ def solve(part: Literal["1", "2"]):
     puzzle_input = get_input()
     raise NotImplementedError()
 
-def get_input():
+def get_input(day: str = DAY, sample: bool = False) -> list[str]:
     """Parse and return puzzle input in desired format."""
     # Return values varies depending on puzzle requirements.
     # Provide specific return type hint for each day.
+    src_path = pathlib.Path(f"day_{day}/day_{day}.txt")
+    if sample:
+        src_path = pathlib.Path(f"day_{day}/day_{day}_sample.txt")
 
-    # Use util to load file to format list[str].
-    puzzle_input = load_puzzle_input(DAY)
+    if not src_path.exists():
+        raise ValueError(f"Cannot find {src_path!s} file.")
 
-    # Parse and return input in desired format here.
-    raise NotImplementedError()
+    data = []
+    with open(src_path, "r", encoding="UTF-8") as f:
+        for line in f:
+            data.append(line.replace("\n", ""))
+
+    # Optionally add required data transformation(s) here.
+
+    return data
 
 if __name__ == "__main__":
     pass

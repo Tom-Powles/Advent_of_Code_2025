@@ -15,7 +15,7 @@ def valid_day(day: str) -> str:
 
 def _new(day: int) -> None:
     """
-    Generate a folder for the X day using `day_example`
+    Generate a folder for X day using `day_example`
     where one doesn't already exist.
     """
     # Create new directory and copy files from day_example directory, renaming "example" to "day"
