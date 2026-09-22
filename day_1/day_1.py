@@ -16,9 +16,9 @@ def solve(part: Literal["1", "2"]):
     # through all rotations is required either way.
     # Minimal cost for simplicity.
     if part == "1":
-        print(zero_count)
+        print(f"...day {DAY}, part {part} solution: {zero_count}")
     else:
-        print(cycle_count)
+        print(f"...day {DAY}, part {part} solution: {cycle_count}")
 
 def get_input(day: str = DAY, sample: bool = False) -> list[str]:
     """Parse and return puzzle input in desired format."""

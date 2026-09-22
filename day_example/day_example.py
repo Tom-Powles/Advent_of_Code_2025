@@ -10,6 +10,7 @@ def solve(part: Literal["1", "2"]):
     print(f"Solving day {DAY} part {part}...")
     puzzle_input = get_input()
     raise NotImplementedError()
+    print(f"...day {DAY}, part {part} solution: {solution}")
 
 def get_input(day: str = DAY, sample: bool = False) -> list[str]:
     """Parse and return puzzle input in desired format."""
